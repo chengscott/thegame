@@ -274,11 +274,7 @@ func (a *Arena) Run() {
 	for {
 		select {
 		case <-tick:
-			if !paused {
-				tickCount++
-				a.tick()
-			}
-			a.broadcast()
+			// do nothing
 		case <-perfTick:
 			log.Println("ticks per second:", tickCount-lastTick)
 			lastTick = tickCount
@@ -304,6 +300,12 @@ func (a *Arena) Run() {
 			case Resume:
 				log.Println("Game Resumed")
 				paused = false
+			case Sync:
+				if !paused {
+					tickCount++
+					a.tick()
+				}
+				a.broadcast()
 			case c:
 				log.Printf("No known action to %q", c)
 			}

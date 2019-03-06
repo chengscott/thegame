@@ -5,4 +5,5 @@ type GameCommand int
 const (
 	Pause GameCommand = iota
 	Resume
+	Sync
 )

@@ -98,6 +98,10 @@ func main() {
 				gs.arena.commandChan <- Pause
 			case "r":
 				gs.arena.commandChan <- Resume
+			case "s":
+				gs.arena.commandChan <- Sync
+			case "":
+				// do nothing
 			default:
 				fmt.Printf("Unknown command: %q\n", line)
 			}
