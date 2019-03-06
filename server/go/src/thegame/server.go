@@ -7,10 +7,11 @@ import (
 	"log"
 	"net"
 
-	_ "golang.org/x/net/context"
+	_ "context"
+
 	"google.golang.org/grpc"
 
-	"github.com/afg984/thegame/server/go/src/thegame/pb"
+	"thegame/pb"
 )
 
 var listen string

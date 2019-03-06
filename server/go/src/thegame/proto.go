@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/afg984/thegame/server/go/src/thegame/pb"
+	"thegame/pb"
 )
 
 type ProtoEntity interface {

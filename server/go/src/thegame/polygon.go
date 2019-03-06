@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/afg984/thegame/server/go/src/thegame/pb"
+	"thegame/pb"
 )
 
 type Shape int
